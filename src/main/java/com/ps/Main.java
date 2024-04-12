@@ -1,8 +1,6 @@
 package com.ps;
 import java.util.Scanner;
 
-import static com.ps.MortgageCalculator.mortgageCalculator;
-
 public class Main {
     static Scanner scanner = new Scanner(System.in);
 
@@ -14,14 +12,14 @@ public class Main {
         System.out.print("What is your Principal amount? ");
         principal = scanner.nextFloat();
         System.out.println();
-        System.out.print("What is the monthly interest rate? ");
+        System.out.print("What is the monthly interest rate in %? ");
         interestRate = scanner.nextFloat();
         System.out.println();
-        System.out.print("What is the loan length? ");
+        System.out.print("What is the loan length in years? ");
         loanDuration = scanner.nextInt();
         System.out.println();
 
-        System.out.println(mortgageCalculator(principal, interestRate, loanDuration));
+        System.out.println(MortgageCalculator.run(principal, interestRate, loanDuration));
 
         scanner.close();
     }
