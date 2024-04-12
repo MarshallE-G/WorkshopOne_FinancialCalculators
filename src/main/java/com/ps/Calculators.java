@@ -1,6 +1,6 @@
 package com.ps;
 
-public class MortgageCalculator extends Main {
+public class Calculators extends Main {
 
     // Create static method
         // Find out principal amount from user
@@ -9,7 +9,7 @@ public class MortgageCalculator extends Main {
         // Create compounding interest formula for monthly loan amount
         // Find interest amount for loan duration
         // Return a sentence stating monthly loan amount and interest for loan duration
-    public static String run(float principal, float interestRate, int loanDuration) {
+    public static String mortgageCalculator(float principal, float interestRate, int loanDuration) {
         float monthlyInterestRateInDecimals = (interestRate/100) / 12;
         int timeInMonths = 12 * loanDuration;
 
