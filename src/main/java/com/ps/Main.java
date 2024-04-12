@@ -21,7 +21,8 @@ public class Main {
         loanDuration = scanner.nextInt();
         System.out.println();
 
-        mortgageCalculator(principal, interestRate, loanDuration);
+        System.out.println(mortgageCalculator(principal, interestRate, loanDuration));
+
         scanner.close();
     }
 }

@@ -17,7 +17,7 @@ public class MortgageCalculator extends Main {
          * of $36,115.99
          */
         String theExpectedMonthlyPaymentAndTotalInterestPaid =
-                "A $" + String.format("%.2f", principal) + " loan at " + String.format("%.2f", interestRateInDecimals)
+                "A $" + String.format("%.2f", principal) + " loan at " + String.format("%.3f", interestRate)
                         + "% interest for " + loanDuration + " years would have a $"
                         + String.format("%.2f", monthlyLoanAmount) + "/mo payment with a total interest of $"
                         + String.format("%.2f", totalInterest) + ".\n";
