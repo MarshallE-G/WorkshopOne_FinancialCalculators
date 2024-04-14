@@ -26,7 +26,7 @@ public class Calculators extends Main {
                 "A $" + String.format("%.2f", principal) + " loan at " + String.format("%.3f", interestRate)
                         + "% interest for " + loanDuration + " years would have a $"
                         + String.format("%.2f", monthlyLoanPayment) + "/mo payment with a total interest of $"
-                        + String.format("%.2f", totalInterest) + ".\n";
+                        + String.format("%.2f", totalInterest) + ".";
 
         return theExpectedMonthlyPaymentAndTotalInterestPaid;
     }
@@ -49,7 +49,7 @@ public class Calculators extends Main {
                         + String.format("%.2f", interestRate) + "% interest and matures in " + numOfYears
                         + " years, your CD's ending balance will be $" + String.format("%.2f", endBalance)
                         + " and you would have earned $" + String.format("%.2f", interestAccrued)
-                        + " in interest.\n";
+                        + " in interest.";
 
         return endingBalanceAndInterest;
     }

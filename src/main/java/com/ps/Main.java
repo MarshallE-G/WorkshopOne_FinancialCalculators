@@ -11,7 +11,7 @@ public class Main {
         int loanDuration = 0; // From Mortgage Calculator
         int numOfYears = 0; // From Future Value Calculator
 
-        System.out.print("What is your Principal amount? ");
+        /*System.out.print("What is your Principal amount? ");
         principal = scanner.nextFloat();
         System.out.println();
         System.out.print("What is the monthly interest rate in %? ");
@@ -19,11 +19,21 @@ public class Main {
         System.out.println();
         System.out.print("What is the loan length in years? ");
         loanDuration = scanner.nextInt();
-        System.out.println();
+        System.out.println();*/
 
         // System.out.println(Calculators.mortgageCalculator(principal, interestRate, loanDuration));
 
-        System.out.println(Calculators.fVCalculator());
+        System.out.print("What is your CD's deposit amount? ");
+        principal = scanner.nextFloat();
+        System.out.println();
+        System.out.print("What is the interest rate in %? ");
+        interestRate = scanner.nextFloat();
+        System.out.println();
+        System.out.print("How many years will it take for your CD to mature? ");
+        numOfYears = scanner.nextInt();
+        System.out.println();
+
+        System.out.println(Calculators.fVCalculator(principal, interestRate, numOfYears));
 
         scanner.close();
     }
