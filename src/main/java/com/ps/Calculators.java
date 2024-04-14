@@ -2,13 +2,14 @@ package com.ps;
 
 public class Calculators extends Main {
 
-    // Create static method
-        // Find out principal amount from user
-        // Find interest rate from user
-        // Find loan length/duration from user
-        // Create compounding interest formula for monthly loan amount
-        // Find interest amount for loan duration
-        // Return a sentence stating monthly loan amount and interest for loan duration
+    // Mortgage Calculator
+        // Create static method
+            // Find out principal amount from user
+            // Find interest rate from user
+            // Find loan length/duration from user
+            // Create compounding interest formula for monthly loan amount
+            // Find interest amount for loan duration
+            // Return a sentence stating monthly loan amount and interest for loan duration
     public static String mortgageCalculator(float principal, float interestRate, int loanDuration) {
         float monthlyInterestRateInDecimals = (interestRate/100) / 12;
         int timeInMonths = 12 * loanDuration;
@@ -18,7 +19,7 @@ public class Calculators extends Main {
                 (Math.pow((1 + monthlyInterestRateInDecimals), timeInMonths) - 1));
 
         float totalInterest = (monthlyLoanPayment * (12*loanDuration)) - principal;
-        /* A $53,000 loan at 7.625% interest for 15 years would have a $495.09/mo payment with a total interest
+        /* Ex.) A $53,000 loan at 7.625% interest for 15 years would have a $495.09/mo payment with a total interest
          * of $36,115.99
          */
         String theExpectedMonthlyPaymentAndTotalInterestPaid =
@@ -28,6 +29,29 @@ public class Calculators extends Main {
                         + String.format("%.2f", totalInterest) + ".\n";
 
         return theExpectedMonthlyPaymentAndTotalInterestPaid;
+    }
+
+    // A calculator that determines the future value of a one-time deposit to a CD (Certificate of Deposit)
+    //
+    public static String fVCalculator(float principal, float interestRate, int numOfYears) {
+
+        float dailyInterestRateInDecimals = (interestRate/100) / 365;
+        int timeInDays = 365 * numOfYears;
+
+        float endBalance = (float) (principal * Math.pow((1 + dailyInterestRateInDecimals), timeInDays));
+        float interestAccrued = endBalance - principal;
+        /* Ex.) If you deposit $1,000 in a CD that earns 1.75% interest and matures in 5 years, your CD's ending
+         * balance will be $1,092.62 and you would have earned $92.62 in interest.
+         */
+
+        String endingBalanceAndInterest =
+                "If you deposit $" + String.format("%.2f", principal) + " in a CD that earns "
+                        + String.format("%.2f", interestRate) + "% interest and matures in " + numOfYears
+                        + " years, your CD's ending balance will be $" + String.format("%.2f", endBalance)
+                        + " and you would have earned $" + String.format("%.2f", interestAccrued)
+                        + " in interest.\n";
+
+        return endingBalanceAndInterest;
     }
 
 }
