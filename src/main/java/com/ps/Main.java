@@ -7,7 +7,9 @@ public class Main {
     public static void main(String[] args) {
         float principal = 0;
         float interestRate = 0;
-        int loanDuration = 0;
+
+        int loanDuration = 0; // From Mortgage Calculator
+        int numOfYears = 0; // From Future Value Calculator
 
         System.out.print("What is your Principal amount? ");
         principal = scanner.nextFloat();
@@ -19,7 +21,9 @@ public class Main {
         loanDuration = scanner.nextInt();
         System.out.println();
 
-        System.out.println(Calculators.mortgageCalculator(principal, interestRate, loanDuration));
+        // System.out.println(Calculators.mortgageCalculator(principal, interestRate, loanDuration));
+
+        System.out.println(Calculators.fVCalculator());
 
         scanner.close();
     }
