@@ -32,7 +32,6 @@ public class Calculators extends Main {
     }
 
     // A calculator that determines the future value of a one-time deposit to a CD (Certificate of Deposit)
-    //
     public static String fVCalculator(float principal, float interestRate, int numOfYears) {
 
         float dailyInterestRateInDecimals = (interestRate/100) / 365;
