@@ -2,7 +2,7 @@ package com.ps;
 
 public class Calculators extends Main {
 
-    // Mortgage Calculator
+    // Calculates how much a monthly payment for a loan would be and the total interest.
     // Create static method
         // Find out principal amount from user
         // Find interest rate from user
