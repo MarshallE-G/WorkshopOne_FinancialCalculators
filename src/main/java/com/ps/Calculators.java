@@ -61,9 +61,20 @@ public class Calculators extends Main {
 
         float presentValue = (float) (monthlyPayout * ((1 - Math.pow((1 + monthlyInterestRateInDecimals), (-numOfPayments)))
                 / monthlyInterestRateInDecimals));
+        /* There's a rounding issue above.
+         * The result of "Math.pow((1 + monthlyInterestRateInDecimals), (-numOfPayments))" is off after the 4th decimal place.
+         * --> results in a larger larger decimal. Causes present value to be a bit off.
+         */
 
+        /* Ex.) To fund an annuity that pays $3,000 monthly for 20 years and earns an expected 2.5% interest, you would
+         * need to invest $566,141.46 today.
+         */
+        String pVResult =
+                "To fund an annuity that pays $" + String.format("%2.f", monthlyPayout) + " monthly for "
+                        + numOfYears + " years and earns an expected " + String.format("%.2f", interestRate)
+                        + "% interest, you would need to invest $" + String.format("%.2f", presentValue) + " today.";
 
-        return "" + presentValue;
+        return pVResult;
     }
 
 }

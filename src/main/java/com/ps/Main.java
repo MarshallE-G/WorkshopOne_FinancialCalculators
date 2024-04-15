@@ -1,5 +1,6 @@
 package com.ps;
 import java.util.Scanner;
+import java.math.BigDecimal;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
@@ -7,9 +8,10 @@ public class Main {
     public static void main(String[] args) {
         float principal = 0;
         float interestRate = 0;
+        float monthlyPayout = 0;
 
         int loanDuration = 0; // From Mortgage Calculator
-        int numOfYears = 0; // From Future Value Calculator
+        int numOfYears = 0; // From Future Value Calculator and Present Value Calculator
 
         System.out.println(
                 "Which calculator would you like to use?\n\n" +
@@ -53,7 +55,7 @@ public class Main {
             case "3":
                 System.out.println("You selected the 'Present Value Calculator'");
                 System.out.print("What is your monthly payout amount? ");
-                principal = scanner.nextFloat();
+                monthlyPayout = scanner.nextFloat();
                 System.out.println();
                 System.out.print("What is the interest rate in %? ");
                 interestRate = scanner.nextFloat();
@@ -62,7 +64,7 @@ public class Main {
                 numOfYears = scanner.nextInt();
                 System.out.println();
 
-                System.out.println(Calculators.pVCalculator(principal, interestRate, numOfYears));
+                System.out.println(Calculators.pVCalculator(monthlyPayout, interestRate, numOfYears));
                 break;
             default:
                 System.out.println("ERROR: Type either 1, 2, or 3.");
