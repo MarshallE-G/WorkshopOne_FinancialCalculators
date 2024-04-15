@@ -1,6 +1,5 @@
 package com.ps;
 import java.util.Scanner;
-import java.math.BigDecimal;
 
 public class Main {
     static Scanner scanner = new Scanner(System.in);
