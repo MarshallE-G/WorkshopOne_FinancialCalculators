@@ -23,7 +23,7 @@ public class Calculators extends Main {
          * of $36,115.99
          */
         String theExpectedMonthlyPaymentAndTotalInterestPaid =
-                "A $" + String.format("%.2f", principal) + " loan at " + String.format("%.3f", interestRate)
+                "A $" + String.format("%.2f", principal) + " loan at " + interestRate
                         + "% interest for " + loanDuration + " years would have a $"
                         + String.format("%.2f", monthlyLoanPayment) + "/mo payment with a total interest of $"
                         + String.format("%.2f", totalInterest) + ".";
@@ -70,8 +70,8 @@ public class Calculators extends Main {
          * need to invest $566,141.46 today.
          */
         String pVResult =
-                "To fund an annuity that pays $" + String.format("%2.f", monthlyPayout) + " monthly for "
-                        + numOfYears + " years and earns an expected " + String.format("%.2f", interestRate)
+                "To fund an annuity that pays $"+ String.format("%.2f", monthlyPayout) + " monthly for "
+                        + numOfYears + " years and earns an expected " + interestRate
                         + "% interest, you would need to invest $" + String.format("%.2f", presentValue) + " today.";
 
         return pVResult;
