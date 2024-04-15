@@ -16,16 +16,17 @@ public class Main {
         System.out.println();
 
         switch (selection) {
-            // Mortgage Calculator
+
             case "1":
+                // Mortgage Calculator
                 ifMortgage();
                 break;
-            // Future Value Calculator
             case "2":
+                // Future Value Calculator
                 ifFV();
                 break;
-            // Present Value Calculator
             case "3":
+                // Present Value Calculator
                 ifPV();
                 break;
             default:
