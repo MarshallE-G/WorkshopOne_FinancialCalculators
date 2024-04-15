@@ -59,7 +59,7 @@ public class Calculators extends Main {
         float monthlyInterestRateInDecimals = (interestRate/100) / 12;
         int numOfPayments = 12 * numOfYears;
 
-        float presentValue = (float) (monthlyPayout * ((1 - Math.pow((1 + monthlyPayout), -240))
+        float presentValue = (float) (monthlyPayout * ((1 - Math.pow((1 + monthlyInterestRateInDecimals), (-numOfPayments)))
                 / monthlyInterestRateInDecimals));
 
 
