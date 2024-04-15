@@ -14,7 +14,8 @@ public class Main {
         System.out.println(
                 "Which calculator would you like to use?\n\n" +
                         "If Mortgage Calculator, type 1\n" +
-                        "If Future Value Calculator, type 2\n"
+                        "If Future Value Calculator, type 2\n" +
+                        "If Present Value Calculator, type 3\n"
         );
         System.out.println("Enter here: ");
         String selection = scanner.nextLine();
@@ -49,8 +50,22 @@ public class Main {
 
                 System.out.println(Calculators.fVCalculator(principal, interestRate, numOfYears));
                 break;
+            case "3":
+                System.out.println("You selected the 'Present Value Calculator'");
+                System.out.print("What is your monthly payout amount? ");
+                principal = scanner.nextFloat();
+                System.out.println();
+                System.out.print("What is the interest rate in %? ");
+                interestRate = scanner.nextFloat();
+                System.out.println();
+                System.out.print("How many years will you have to pay out? ");
+                numOfYears = scanner.nextInt();
+                System.out.println();
+
+                System.out.println(Calculators.pVCalculator(principal, interestRate, numOfYears));
+                break;
             default:
-                System.out.println("ERROR: Type either 1 or 2.");
+                System.out.println("ERROR: Type either 1, 2, or 3.");
                 break;
         }
 

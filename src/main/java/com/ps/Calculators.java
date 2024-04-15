@@ -3,13 +3,13 @@ package com.ps;
 public class Calculators extends Main {
 
     // Mortgage Calculator
-        // Create static method
-            // Find out principal amount from user
-            // Find interest rate from user
-            // Find loan length/duration from user
-            // Create compounding interest formula for monthly loan amount
-            // Find interest amount for loan duration
-            // Return a sentence stating monthly loan amount and interest for loan duration
+    // Create static method
+        // Find out principal amount from user
+        // Find interest rate from user
+        // Find loan length/duration from user
+        // Create compounding interest formula for monthly loan amount
+        // Find interest amount for loan duration
+        // Return a sentence stating monthly loan amount and interest for loan duration
     public static String mortgageCalculator(float principal, float interestRate, int loanDuration) {
         float monthlyInterestRateInDecimals = (interestRate/100) / 12;
         int timeInMonths = 12 * loanDuration;
@@ -51,6 +51,19 @@ public class Calculators extends Main {
                         + " in interest.";
 
         return endingBalanceAndInterest;
+    }
+
+    // A calculator that determines the present value of an ordinary annuity.
+    public static String pVCalculator(float monthlyPayout, float interestRate, int numOfYears) {
+
+        float monthlyInterestRateInDecimals = (interestRate/100) / 12;
+        int numOfPayments = 12 * numOfYears;
+
+        float presentValue = (float) (monthlyPayout * ((1 - Math.pow((1 + monthlyPayout), -240))
+                / monthlyInterestRateInDecimals));
+
+
+        return "" + presentValue;
     }
 
 }
