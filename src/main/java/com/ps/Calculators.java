@@ -3,13 +3,6 @@ package com.ps;
 public class Calculators extends Main {
 
     // A calculator that determines how much a monthly payment for a loan would be and the total interest.
-    // Create static method
-        // Find out principal amount from user
-        // Find interest rate from user
-        // Find loan length/duration from user
-        // Create compounding interest formula for monthly loan amount
-        // Find interest amount for loan duration
-        // Return a sentence stating monthly loan amount and interest for loan duration
     public static String mortgageCalculator(float principal, float interestRate, int loanDuration) {
         float monthlyInterestRateInDecimals = (interestRate/100) / 12;
         int timeInMonths = 12 * loanDuration;
