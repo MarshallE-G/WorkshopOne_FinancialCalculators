@@ -5,12 +5,12 @@ public class Main {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        float principal = 0;
-        float interestRate = 0;
-        float monthlyPayout = 0;
+        float principal = 0; // Used in Mortgage and Future Value Calculator
+        float interestRate = 0; // Used in all calculator methods
+        float monthlyPayout = 0; // Used in Present Value Calculator
 
-        int loanDuration = 0; // From Mortgage Calculator
-        int numOfYears = 0; // From Future Value Calculator and Present Value Calculator
+        int loanDuration = 0; // Used in Mortgage Calculator
+        int numOfYears = 0; // Used in Future Value Calculator and Present Value Calculator
 
         System.out.println(
                 "Which calculator would you like to use?\n\n" +
@@ -23,6 +23,7 @@ public class Main {
         System.out.println();
 
         switch (selection) {
+            // Mortgage Calculator
             case "1":
                 System.out.println("You selected the 'Mortgage Calculator'");
                 System.out.print("What is your Principal amount? ");
@@ -37,6 +38,7 @@ public class Main {
 
                 System.out.println(Calculators.mortgageCalculator(principal, interestRate, loanDuration));
                 break;
+            // Future Value Calculator
             case "2":
                 System.out.println("You selected the 'Future Value Calculator'");
                 System.out.print("What is your CD's deposit amount? ");
@@ -51,6 +53,7 @@ public class Main {
 
                 System.out.println(Calculators.fVCalculator(principal, interestRate, numOfYears));
                 break;
+            // Present Value Calculator
             case "3":
                 System.out.println("You selected the 'Present Value Calculator'");
                 System.out.print("What is your monthly payout amount? ");
